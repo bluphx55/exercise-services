@@ -9,6 +9,11 @@ import java.util.List;
 public class ActivityRepositoryStub implements ActivityRepository {
 
     @Override
+    public void create(Activity activity) {
+        //should issue a insert statement to the db
+    }
+
+    @Override
     public List<Activity> findAllActivities() {
         List<Activity> activities = new ArrayList<Activity>();
 
