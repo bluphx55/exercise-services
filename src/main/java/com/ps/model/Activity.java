@@ -15,6 +15,7 @@ public class Activity {
     @Getter(onMethod=@_({@XmlElement(name="desc")}))
     private String description;
     private int duration;
+    private User user;
 
     public Activity() {}
 

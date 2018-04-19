@@ -1,6 +1,7 @@
 package com.ps;
 
 import com.ps.model.Activity;
+import com.ps.model.User;
 import com.ps.repository.ActivityRepository;
 import com.ps.repository.ActivityRepositoryStub;
 
@@ -27,6 +28,13 @@ public class ActivityResource {
     @Path("{activityId}")
     public Activity getActivity(@PathParam("activityId") String activityId) {
         return activityRepository.findActivity(activityId);
+    }
+
+    @GET
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    @Path("{activityId}/user")
+    public User getActivityUser(@PathParam("activityId") String activityId) {
+        return activityRepository.findActivity(activityId).getUser();
     }
 
 }

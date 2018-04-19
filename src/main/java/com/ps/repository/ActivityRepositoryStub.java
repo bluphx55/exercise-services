@@ -1,6 +1,7 @@
 package com.ps.repository;
 
 import com.ps.model.Activity;
+import com.ps.model.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +37,11 @@ public class ActivityRepositoryStub implements ActivityRepository {
         activity1.setDescription("Swimming");
         activity1.setDuration(55);
 
+        User user = new User();
+        user.setId("5678");
+        user.setName("Rome");
+
+        activity1.setUser(user);
 
         return activity1;
     }
